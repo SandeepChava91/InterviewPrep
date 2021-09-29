@@ -1,3 +1,11 @@
+/**
+ * The below question is asked in HITACHI VANTARA
+ * 
+ * Given a Sentence - "one two three", reverse each word in the sentence.
+ * Expected Output - "eno owt eerht"
+ */
+
+
 // Add a reverse functionality to a string
 String.prototype.reverse = function () {
     let result = "";
