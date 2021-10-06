@@ -65,7 +65,6 @@ async function getTeams(year, k) {
     console.log(finalResult);
 }
 
-
 async function APICall(year, page) {
     let url = "https://jsonmock.hackerrank.com/api/football_matches?competition=UEFA%20Champions%20League&year=" + year + "&page=" + page;
 
@@ -73,12 +72,10 @@ async function APICall(year, page) {
         method: 'GET'
     };
 
-    https.get
     return myFetch(url, requestOptions)
         .then(response => response)
         .catch(error => console.log('error', error));
 }
-
 
 getTeams(2015, 13).then(() => {
     console.log("Done");
