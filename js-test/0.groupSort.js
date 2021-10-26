@@ -15,7 +15,5 @@ function groupSort(arr) {
 
 }
 
-
-
 const result = groupSort([])
 console.log(result);
