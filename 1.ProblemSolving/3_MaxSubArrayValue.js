@@ -4,11 +4,9 @@ function maxSubarrayValue(arr) {
     let subArrays = [];
     let subArray = [];
 
-    for(let i = 0; i < arr.length; i++)
-    {
-        for(let j = i; j < arr.length; j++)
-        {
-            for(let k = i; k <= j; k++){
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i; j < arr.length; j++) {
+            for (let k = i; k <= j; k++) {
                 subArray.push(arr[k]);
             }
 
@@ -20,18 +18,16 @@ function maxSubarrayValue(arr) {
     // console.log(subArrays);
 
     let max = Number.MIN_VALUE;
-    for(let i=0; i<subArrays.length; i++){
+    for (let i = 0; i < subArrays.length; i++) {
         let localMax = maxSubArrayUtil(subArrays[i]);
 
-        if(localMax > max) {
+        if (localMax > max) {
             max = localMax;
         }
     }
 
     return max;
 }
-
-
 
 function maxSubArrayUtil(arr) {
 

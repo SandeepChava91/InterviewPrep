@@ -1,5 +1,6 @@
 // Find all possible anagrams of s2 in s1
 
+// Use sliding window algo
 function isAnagram(s1, s2) {
 
     let result = [];

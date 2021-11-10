@@ -1,4 +1,3 @@
-console.log("Hello");
 
 function segment_func(x, space) {
     // Write your code here
@@ -9,25 +8,24 @@ function segment_func(x, space) {
 
     for (let i = 0; i < space.length; i++) {
         let endIndex = i + x;
-        // console.log(space[endIndex-1])
-        if(!space[endIndex-1]){
+
+        if (!space[endIndex - 1]) {
             break;
         }
-        // if (endIndex === space.length) {
-        //     break;
-        // }
+
         seg = space.slice(i, i + x);
         seg.sort();
 
-        if(seg.length>0){
+        if (seg.length > 0) {
             segments.push(seg[0]);
         }
     }
-    
-    if(segments.length>1){
+
+    if (segments.length > 1) {
         segments.sort();
         segments.reverse();
-        if(segments.length>0){
+
+        if (segments.length > 0) {
             return segments[0];
         } else {
             return Error("Input incorrect");
@@ -37,8 +35,6 @@ function segment_func(x, space) {
         seg.reverse();
         return seg[0];
     }
-
-   
 }
 
 
