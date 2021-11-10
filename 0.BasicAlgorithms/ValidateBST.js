@@ -26,9 +26,11 @@ function isBSTUtil(node, min, max) {
     if (node == null)
         return true;
 
+    // Node data should be between the range
     if (node.data < min || node.data > max)
         return false;
 
+    // Run a recusrion converging the range(reduce left bby -1 and increase right by 1)
     return (isBSTUtil(node.left, min, node.data - 1) && isBSTUtil(node.right, node.data + 1, max));
 }
 
