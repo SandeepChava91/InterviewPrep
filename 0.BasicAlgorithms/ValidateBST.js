@@ -18,7 +18,7 @@ function test() {
 }
 
 function isBST(root) {
-    return isBSTUtil(root, Number.MIN_VALUE, Number.MAX_VALUE);
+    return isBSTUtil(root, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY);
 }
 
 function isBSTUtil(node, min, max) {
@@ -30,7 +30,7 @@ function isBSTUtil(node, min, max) {
     if (node.data < min || node.data > max)
         return false;
 
-    // Run a recusrion converging the range(reduce left bby -1 and increase right by 1)
+    // Run a recusrion converging the range(reduce left by -1 and increase right by 1)
     return (isBSTUtil(node.left, min, node.data - 1) && isBSTUtil(node.right, node.data + 1, max));
 }
 

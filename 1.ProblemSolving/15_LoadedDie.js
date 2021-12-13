@@ -33,7 +33,6 @@ function test() {
     let roll = fairdie.roll();
     console.log(roll);
 
-
     const loadedDie = new LoadedDie(6, 5, 5);
     let loadedRoll = loadedDie.roll();
     console.log(loadedRoll);

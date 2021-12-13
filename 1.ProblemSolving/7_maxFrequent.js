@@ -29,14 +29,11 @@ function MaxFrequent(arr, k) {
             maxMap[Object.keys(maxMap)[k-1]]
         }
 
-
-
     }
 
     let sorted = Object.keys(inputMap).sort((a, b) => {
         return (inputMap[b] - inputMap[a]) ? inputMap[b] - inputMap[a] : b - a;
     });
-
 
     if (Object.keys(inputMap).length < k) {
         k = Object.keys(inputMap).length;
